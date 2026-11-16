@@ -1,3 +1,4 @@
+
 name: Deploy PHP to Hosting
 
 on:
@@ -9,6 +10,7 @@ jobs:
   web-deploy:
     name: Deploy Website
     runs-on: ubuntu-latest
+
     steps:
       - name: Lay code moi nhat tu GitHub
         uses: actions/checkout@v4
@@ -20,3 +22,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /htdocs/
+          local-dir: ./lab05/
